@@ -4,7 +4,7 @@ var path=require('path');
 
 app.get('/', function (req, res) {
   console.log('Request received');
-  res.sendFile(path.join(__dirname,'app','index.html'));
+  res.sendFile(path.join(__dirname,'/','index.html'));
 });
 app.get('/welcome', function (req, res) {
   console.log('Request received');
