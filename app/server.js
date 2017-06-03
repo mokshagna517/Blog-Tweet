@@ -6,9 +6,9 @@ app.get('/register', function (req, res) {
   console.log('Request received');
   res.sendFile(path.join(__dirname,'/html','register.html'));
 });
-app.get('/welcome', function (req, res) {
+app.get('/login', function (req, res) {
   console.log('Request received');
-  res.send('Welcome to the next page');
+  res.sendFile(path.join(__dirname,'/html','login.html'));
 });
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');

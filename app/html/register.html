@@ -16,6 +16,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" type="text/css" href="CSS/register.css">
   </head>
   <body style="background-color:lightblue">
    <header>
@@ -23,17 +24,27 @@
     <p style="color:blue;font-size:28px;text-align:center">A Different blog site which you should try</p>
 </header>
     
-     <h2>SignUp to become a member</h2>
-    <form width="60%">
+     <h2 id="Signup" style="color:white">SignUp to become a member</h2>
+    <form class="register-form" method="post">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+    <label for="exampleInputEmail1" style="color:red">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
+    
+    <label for="username" style="color:red">User Name</label>
+    <input type="text" class="form-control" id="username">
+    <label for="mobileno" style="color:red">Mobile</label>
+    <input type="text" class="form-control" id="mobileno">
+    <label for="exampleInputPassword1" style="color:red">Password</label>
     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input  id="button" type="submit" value="Submit">
   </div>
   </form>
+  <div class="loginsection">
+   <p>If you are already a member, click below to Log in</p>
+    <a href="http://app.vcap.me/login">Login</a>
+  </div>
    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
