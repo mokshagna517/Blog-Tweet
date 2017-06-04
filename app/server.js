@@ -2,7 +2,9 @@ var express = require('express');
 var app = express();
 var path=require('path');
 
-app.get('/register', function (req, res) {
+
+
+app.get('/', function (req, res) {
   console.log('Request received');
   res.sendFile(path.join(__dirname,'/html','register.html'));
 });
