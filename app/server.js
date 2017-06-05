@@ -22,7 +22,9 @@ res.sendFile(path.join(__dirname,'/html','register.js'));
 app.post('http://auth.vcap.me/signup',function(req,res){
   console.log(res.body);
   });
-
+app.post('http://auth.vcap.me/login',function(req,res){
+console.log(res.body);
+});
 
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
