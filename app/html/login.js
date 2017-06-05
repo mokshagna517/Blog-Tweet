@@ -1,3 +1,4 @@
+console.log("login");
 function myfunc(){
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
@@ -13,7 +14,7 @@ function myfunc(){
               }  
           }; 
     var username=document.getElementById("username").value;
-    var password=document.getElementById("exampleInputPassword1").value;
+    var password=document.getElementById("password").value;
     
      console.log(username);
    request.open('POST','http://auth.vcap.me/login',true);
