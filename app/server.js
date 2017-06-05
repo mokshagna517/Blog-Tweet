@@ -19,16 +19,9 @@ app.get('/login', function (req, res) {
 app.get('/register.js',function(req,res){
 res.sendFile(path.join(__dirname,'/html','register.js'));
 });
-request.post(function(req,res){
-    'http://auth.vcap.me/signup',
-    { json: {username:req.body.username, password: req.body.password, email:req.body.email, mobile:req.body.mobile } },
-    function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            console.log(username);
-        }
-    }
-}
-);
+app.post('http://auth.vcap.me/signup',function(req,res){
+  console.log(res.body);
+  });
 
 
 app.listen(8080, function () {
