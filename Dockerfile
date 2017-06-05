@@ -3,7 +3,7 @@ FROM mhart/alpine-node:4.4
 #Create the npm install layer independently
 RUN mkdir /app
 COPY app/package.json /app
-RUN cd /app && npm install
+RUN cd /app && npm install && npm install request
 
 # Add app source files
 ADD app /app/

@@ -49,20 +49,20 @@
 </header>
     
      <h2 id="Signup" style="color:white">SignUp to become a member</h2>
-    <form class="register-form" >
+    <form class="register-form" id="myform" action="http://auth.vcap.me/signup" method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1" style="color:red">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
   </div>
   <div class="form-group">
     
     <label for="username" style="color:red">User Name</label>
-    <input type="text" class="form-control" id="username">
+    <input type="text" class="form-control" id="username" name="username">
     <label for="mobileno" style="color:red">Mobile</label>
-    <input type="text" class="form-control" id="mobileno">
+    <input type="text" class="form-control" id="mobileno" name="mobile">
     <label for="exampleInputPassword1" style="color:red">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    <input  id="button" type="submit" value="Submit">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+    <input  id="button" type="button" onclick="myfunc()" value="Submit">
   </div>
   </form>
   <div class="loginsection">
