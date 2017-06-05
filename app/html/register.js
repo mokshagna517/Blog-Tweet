@@ -19,6 +19,7 @@
    var password=document.getElementById("exampleInputPassword1").value;
    var email=document.getElementById("exampleInputEmail1");
    var mobile=document.getElementById("mobileno");
+   console.log(username);
     
   request.open('POST','http://auth.vcap.me/signup',true);
    request.setRequestHeader('Content-Type','application/json');
