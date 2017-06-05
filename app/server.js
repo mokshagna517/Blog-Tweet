@@ -13,7 +13,7 @@ app.get('/login', function (req, res) {
 });
 app.get('/register.js',function(req,res){
 res.sendFile(path.join(__dirname,'/html','register.js'));
-}
+});
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
