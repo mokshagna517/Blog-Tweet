@@ -13,6 +13,10 @@ app.get('/login', function (req, res) {
   console.log('Request received');
   res.sendFile(path.join(__dirname,'/html','login.html'));
 });
+app.get('/home', function(req,res){
+  console.log('Request received');
+  res.sendFile(path.join(__dirname,'/html','home.html'));
+});
 
 
 
