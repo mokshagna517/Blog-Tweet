@@ -6,6 +6,7 @@ function myfunc(){
                   if(request.status===200){
                       console.log("user logged in");
                       alert(" user logged in successfully");
+                      window.location="home.html";
                       }
                       else{
                           alert("Error ");
