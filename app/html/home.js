@@ -1,4 +1,4 @@
-console.log("login");
+console.log("home");
 function myfunc(){
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
