@@ -17,7 +17,11 @@ function myfunc(){
     
      
    request.open('POST','http://auth.vcap.me/user/logout',true);
+   request.withCredentials=true;
+   
    request.setRequestHeader('Content-Type', 'application/json');
+   request.setRequestHeader('Authorization', 'Bearer');
+    
    request.send(null);
     
  }
