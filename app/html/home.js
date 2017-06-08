@@ -5,7 +5,8 @@ function myfunc(){
               if(request.readyState===XMLHttpRequest.DONE){
                   if(request.status===200){
                       console.log("user logged out");
-                      alert(" user logged out successfully");
+                      alert(" you are logged out successfully");
+                       window.location="login";
                       }
                       else{
                           alert("Error ");

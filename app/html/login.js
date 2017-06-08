@@ -5,7 +5,7 @@ function myfunc(){
               if(request.readyState===XMLHttpRequest.DONE){
                   if(request.status===200){
                       console.log("user logged in");
-                      alert(" user logged in successfully");
+                      alert(" You are logged in successfully");
                       window.location="home";
                       }
                       else{
