@@ -29,6 +29,9 @@ app.post('http://auth.vcap.me/signup',function(req,res){
 app.post('http://auth.vcap.me/login',function(req,res){
 console.log(res.body);
 });
+app.post('http://auth.vcap.me/mobile/confirm',function(req,res){
+console.log(res.body);
+});
 app.post('http://auth.vcap.me/user/logout',function(req,res){
 console.log(res.body);
 });
