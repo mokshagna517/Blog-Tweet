@@ -2,6 +2,58 @@ var express = require('express');
 var app = express();
 var path=require('path');
 var request = require('request');
+var fetch = require('node-fetch');
+
+var DEVELOPMENT = (process.env.NODE_ENV == 'production') ? false : true;
+var headers = {'Content-Type': 'application/json'};
+var url;
+if (DEVELOPMENT) {
+  headers.Authorization = 'Bearer ' + process.env.ADMIN_TOKEN;
+  url = `https://data.vcap.me`;
+} else {
+  url = 'http://data.hasura';
+}
+headers['X-Hasura-Role'] = 'admin';
+headers['X-Hasura-User-Id'] = 1;
+app.get('/test', function (req, res) {
+  var schemaFetchUrl = url + '/v1/query';
+  var options = {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({
+      "type" : "select",
+    "args" : {
+        "table" : "Posts",
+        "columns": ["id", "context"]
+        
+    }})
+  };
+  fetch(schemaFetchUrl, options)
+    .then(
+      (response) => {
+        response.text()
+          .then(
+            (data) => {
+              res.send(data);
+            },
+            (e) => {
+              res.send('Error in fetching current schema: ' + err.toString());
+            })
+          .catch((e) => {
+            e.stack();
+            res.send('Error in fetching current schema: ' + e.toString());
+          });
+      },
+      (e) => {
+        console.error(e);
+        res.send('Error in fetching current schema: ' + e.toString());
+      })
+    .catch((e) => {
+      e.stackTrace();
+      res.send('Error in fetching current schema: ' + e.toString());
+    });
+});
+
 
 
 
