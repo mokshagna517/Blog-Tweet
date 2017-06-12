@@ -59,7 +59,7 @@ function myfunc(){
     "args":{
         "table":"Posts",
         "objects":[
-            {"context":document.getElementById("textarea").value,"user_id":document.getElementById("txt")}
+            {"context":document.getElementById("textarea").value,"user_id":document.getElementById("txt").value}
             
         ],
         "returning":["id"]
