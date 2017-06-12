@@ -28,13 +28,14 @@ function myfunc(){
  }
  function insert(){
   var request=new XMLHttpRequest;
-  var x=document.getElementsByTagName('textarea').innerHTML
+  var x=document.getElementById("textarea").value;
+  console.log(x);
    request.onreadystatechange=function(){
               if(request.readyState===XMLHttpRequest.DONE){
                   if(request.status===200){
                       console.log("data inserted");
                       alert(" Your post was successfully inserted into the database.");
-                       document.getElementsByTagName('textarea').innerHTML=" ";
+                       document.getElementById('textarea').value=" ";
                       }
                       else{
                           alert("Error ");
@@ -58,7 +59,7 @@ function myfunc(){
     "args":{
         "table":"Posts",
         "objects":[
-            {"context":"x","user_id":"5"}
+            {"context":document.getElementById("textarea").value,"user_id":"5"}
             
         ],
         "returning":["id"]
