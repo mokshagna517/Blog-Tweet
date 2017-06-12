@@ -71,7 +71,9 @@ app.get('/home', function(req,res){
 });
 
 
-
+app.post(url+'/v1/query/',function(req,res){
+	console.log(res.body);
+});
 app.get('/register.js',function(req,res){
 res.sendFile(path.join(__dirname,'/html','register.js'));
 });
