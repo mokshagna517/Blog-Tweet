@@ -28,6 +28,7 @@ function myfunc(){
  }
  function insert(){
   var request=new XMLHttpRequest;
+  var x=document.getElementsByTagName('textarea').innerHTML
    request.onreadystatechange=function(){
               if(request.readyState===XMLHttpRequest.DONE){
                   if(request.status===200){
@@ -44,7 +45,7 @@ function myfunc(){
    
     
      
-   request.open('POST','https://data.vcap.me/v1/query',true);
+   request.open('POST','http://data.vcap.me/v1/query',true);
    request.withCredentials=true;
    
    request.setRequestHeader('Content-Type', 'application/json');
@@ -57,7 +58,7 @@ function myfunc(){
     "args":{
         "table":"Posts",
         "objects":[
-            {"context":"News","user_id":"5"}
+            {"context":x,"user_id":"5"}
             
         ],
         "returning":["id"]
