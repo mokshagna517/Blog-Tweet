@@ -58,7 +58,7 @@ function myfunc(){
     "args":{
         "table":"Posts",
         "objects":[
-            {"context":x,"user_id":"5"}
+            {"context":"x","user_id":"5"}
             
         ],
         "returning":["id"]
