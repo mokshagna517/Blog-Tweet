@@ -13,7 +13,9 @@ body{
   background-size:cover;
 }
 			</style>
-	<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+			<script type="text/javascript" src="homeang.js"></script>
+	</head>
 		<body>
 			<header>
 				<h1>Hello!Welcome to the home page of blogtweet</h1>
@@ -31,6 +33,14 @@ body{
 				<input type="button" id="btn" onclick="insert()" value="post" />
 				
 			</section>
+		<section ng-app="myApp" ng-controller="myCtrl">
+			<div>
+				<pre ng-repeat="x in articles>
+					{{x.context}}
+				</pre>
+			</div>
+			
+		</section>
 			<div>
 				<input type="button"  onclick="myfunc()" value="Logout" />
 			</div>
