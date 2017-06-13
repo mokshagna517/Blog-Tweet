@@ -69,7 +69,9 @@ app.get('/home', function(req,res){
   console.log('Request received');
   res.sendFile(path.join(__dirname,'/html','home.html'));
 });
-
+app.get('/homeang.js',function(req,res){
+	res.sendFile(path.join(__dirname,'/html','homeang.js'));
+});
 
 app.post(url+'/v1/query/',function(req,res){
 	console.log(res.body);
