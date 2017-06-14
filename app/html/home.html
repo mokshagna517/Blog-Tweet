@@ -34,10 +34,10 @@ body{
 				
 			</section>
 		<section ng-app="myApp" ng-controller="myCtrl">
-			<div>
-				<pre ng-repeat="x in articles">
+			<div ng-repeat="x in articles">
+				<p>
 					{{x.context}}
-				</pre>
+				</p>
 			</div>
 			
 		</section>
