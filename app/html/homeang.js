@@ -1,6 +1,6 @@
 
 var app=angular.module("myApp",[]);
-app.controller=("myCtrl",[$http, $scope,function($scope,$http){
+app.controller=("myCtrl",[ '$scope','$http', function($scope,$http){
    $scope.articles=[];
 	$http({
 		method: "POST",
