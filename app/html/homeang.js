@@ -1,7 +1,7 @@
-(function(){
-var app=angular.module("myApp",[]);
-app.controller=("myCtrl",function($scope,$http){
 
+var app=angular.module("myApp",[]);
+app.controller=("myCtrl",[$http, $scope,function($scope,$http){
+   $scope.articles=[];
 	$http({
 		method: "POST",
 		url:   "http://data.vcap.me/v1/query",
@@ -18,11 +18,10 @@ app.controller=("myCtrl",function($scope,$http){
 	}).then(function successCallback(response){
 		
 				$scope.articles=response.data.context;
-		}, 	function errorCallback(response){
+		}), 	function errorCallback(response){
 			
-			alert("no article found");
+			 $scope.articles=response.data;
 			
 			}
 		
-});
-})();
+}]);
