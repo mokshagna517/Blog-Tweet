@@ -12,6 +12,9 @@ body{
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-t-4TJ3zgJOT_xkmMQwpRbi1ElQwtYMac51Z5jS_DXEGF6Bt8NA");
   background-size:cover;
 }
+#posts{
+	background-color:white;
+	}
 			</style>
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 			<script type="text/javascript" src="homeang.js"></script>
@@ -33,7 +36,8 @@ body{
 				<input type="button" id="btn" onclick="insert()" value="post" />
 				
 			</section>
-		<section ng-app="myApp" ng-controller="myCtrl">
+		<section ng-app="myApp" ng-controller="myCtrl" id="posts">
+			 <h2>Recent Posts</h2>
 			<div ng-repeat="x in articles">
 				<b>
 					{{x.context}}
@@ -41,6 +45,7 @@ body{
 				<p>
 					By user with id: {{x.user_id}} posted at {{x.created | date}}
 				</p>
+				<hr>
 			</div>
 			
 		</section>
