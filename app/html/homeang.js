@@ -1,7 +1,7 @@
 
 var app=angular.module("myApp",[]);
 app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
-   $scope.articles=[];
+   
 	$http({
 		method: "POST",
 		url:   "http://data.vcap.me/v1/query",
@@ -16,11 +16,11 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 	}	
 			
 	}).then(function successCallback(response){
-		
-				$scope.articles=response.data.context;
+		    console.log("successful");
+				$scope.articles=response.data;
 		}), 	function errorCallback(response){
 			
-			 $scope.articles=response.data;
+			 console.log("failure");
 			
 			}
 		
