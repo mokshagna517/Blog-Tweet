@@ -35,11 +35,11 @@ body{
 			</section>
 		<section ng-app="myApp" ng-controller="myCtrl">
 			<div ng-repeat="x in articles">
-				<pre>
+				<b>
 					{{x.context}}
-				</pre>
+				</b>
 				<p>
-					By user with id: {{x.user_id}}
+					By user with id: {{x.user_id}} posted at {{x.created}}
 				</p>
 			</div>
 			
