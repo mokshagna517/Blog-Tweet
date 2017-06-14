@@ -47,8 +47,8 @@ body{
 				<b>
 					{{x.context}}
 				</b>
-				<button type="button" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Star
+				<button type="button" class="btn btn-default btn-lg" id='like' ng-click="likeClick()" ng-init="liked='Like';likeCount='0'">
+        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> {{liked}}  {{likeCount}}
         </button>
 
 

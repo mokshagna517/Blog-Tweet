@@ -1,6 +1,20 @@
 
 var app=angular.module("myApp",[]);
 app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
+	
+	var hasLiked=false;
+	$scope.likeClick=function(){
+		if(!hasLiked){
+			hasLiked=true;
+			$scope.likeCount+=1;
+			$scope.liked='Unlike';
+		}else{
+			hasLiked=false;
+			$scope.likeCount-=1;
+			$scope.liked='Like';
+			
+			}
+		}
    
 	$http({
 		method: "POST",
@@ -25,3 +39,4 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			}
 		
 }]);
+ 
