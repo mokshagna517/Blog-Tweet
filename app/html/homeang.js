@@ -25,7 +25,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
         "table" : "Posts",
         "columns": ["context","user_id","created",
           {
-         "name"="Profile",
+         "name":"Profile",
          "columns":["name"]
       }
         ]
