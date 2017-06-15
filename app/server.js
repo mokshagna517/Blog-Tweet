@@ -72,7 +72,10 @@ app.get('/home', function(req,res){
 app.get('/homeang.js',function(req,res){
 	res.sendFile(path.join(__dirname,'/html','homeang.js'));
 });
-
+app.get('/profile', function(req,res){
+	console.log("profile page requested");
+	res.sendFile(path.join(__dirname,'/html','profile.html'));
+});
 app.post(url+'/v1/query/',function(req,res){
 	console.log(res.body);
 });
