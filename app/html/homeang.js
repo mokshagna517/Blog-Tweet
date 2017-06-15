@@ -23,7 +23,12 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			   "type" : "select",
     "args" : {
         "table" : "Posts",
-        "columns": ["context","user_id","created"]
+        "columns": ["context","user_id","created",
+          {
+         "name"="Profile",
+         "columns":["name"]
+      }
+        ]
         
     }
 
