@@ -1,5 +1,5 @@
 console.log("home");
-console.log(window.localStorage.getItem("Bearer"));
+console.log(window.sessionStorage.getItem("Bearer"));
 function myfunc(){
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
