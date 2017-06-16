@@ -20,17 +20,19 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 		method: "POST",
 		url:   "http://data.vcap.me/v1/query",
 		data: {
-			   "type" : "select",
+	"type" : "select",
     "args" : {
         "table" : "Posts",
-        "columns": ["context","user_id","created"],
-        "order_by":"-created",
-         "limit": 10
-        
+        "columns": ["context", "created",
+        {
+        	"name":"author",
+        	"columns":["name"]
+        }
+        ]
         
     }
-
-	}	
+    
+}
 			
 	}).then(function successCallback(response){
 		    console.log("successful");

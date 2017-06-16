@@ -50,10 +50,10 @@ body{
 				<button type="button" class="btn btn-default btn-lg" id='like' ng-controller="myCtrl" ng-click="likeClick()" ng-init="liked='Like';likeCount='0'">
         <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> {{liked}}  {{likeCount}}
         </button>
-
+         
 
 				<p>
-					By user with id: {{x.user_id}}  posted at {{x.created | date}}
+					By user : {{x.author.name}}  posted at {{x.created | date}}
 				</p>
 				<hr>
 			</div>
