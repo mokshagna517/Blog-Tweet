@@ -28,7 +28,9 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
         	"name":"author",
         	"columns":["name"]
         }
-        ]
+        ],
+        "order_by":"-created",
+        "limit":10
         
     }
     
