@@ -1,4 +1,4 @@
-function profunc(){
+document.getElementById('btn').onclick=function profunc(){
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
               if(request.readyState===XMLHttpRequest.DONE){
