@@ -72,6 +72,9 @@ app.get('/home', function(req,res){
 app.get('/homeang.js',function(req,res){
 	res.sendFile(path.join(__dirname,'/html','homeang.js'));
 });
+app.get('/userang.js',function(req,res){
+	res.sendFile(path.join(__dirname,'/html','userang.js'));
+});
 app.get('/profile', function(req,res){
 	console.log("profile page requested");
 	res.sendFile(path.join(__dirname,'/html','profile.html'));
