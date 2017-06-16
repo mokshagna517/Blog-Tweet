@@ -76,6 +76,9 @@ app.get('/profile', function(req,res){
 	console.log("profile page requested");
 	res.sendFile(path.join(__dirname,'/html','profile.html'));
 });
+app.get('/user', function(req,res){
+	res.sendFile(path.join(__dirname,'/html','user.html'));
+});
 app.post(url+'/v1/query/',function(req,res){
 	console.log(res.body);
 });
