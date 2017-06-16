@@ -9,7 +9,7 @@ app.controller('userCtrl',['$scope','$http',function($scope,$http){
 	"type" : "select",
     "args" : {
         "table" : "Profile",
-        "columns": ["name", "place"]
+        "columns": ["name", "place","dob"]
 
     }
     

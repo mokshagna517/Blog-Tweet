@@ -20,7 +20,9 @@
 				<div class="col-md-4" >
 					<h3>Current Users in our app</h3>
 		<ul class="list-group" ng-repeat="x in user">
-			  <li class="list-group-item list-group-item-info">{{x.name}} lives in {{x.place}}</li>
+			  <li class="list-group-item list-group-item-info">{{x.name}} </li>
+			  <li class="list-group-item list-group-item-info">Place: {{x.place}}</li>
+			  <li class="list-group-item list-group-item-info">Date of Birth:{{x.dob|date}}</li>
 		</ul>
 	</div>
 </div>
