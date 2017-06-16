@@ -1,3 +1,4 @@
+console.log("Profilejs");
 document.getElementById('btn').onclick=function profunc(){
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
@@ -30,7 +31,7 @@ document.getElementById('btn').onclick=function profunc(){
         "table":"Profile",
         "objects":[
             {"name":document.getElementById("name").value,"id":document.getElementById("userid").value,
-            	"place":document.getElementById("place").value,"dob":document.getElementById("dob".value}
+            	"place":document.getElementById("place").value,"dob":document.getElementById("dob").value}
          
         ]
         
