@@ -42,6 +42,15 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			 console.log("failure");
 			
 			}
+			
+			$scope.isCommentClicked=false;
+			$scope.commentClick=function(){
+				
+				if(!$scope.isCommentClicked){
+				$scope.isCommentClicked=true;
+				}else{
+					$scope.isCommentClicked=false;}
+				}
 		
 }]);
  
