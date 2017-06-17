@@ -14,6 +14,31 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			$scope.liked='Like';
 			
 			}
+			$http({
+		method: "POST",
+		url:   "http://data.vcap.me/v1/query",
+		withCredentials:true,
+		data: {
+	"type" : "insert",
+    "args" : {
+        "table" : "Likes",
+        "objects":[
+            {"post_id":}
+        ]
+        
+    }
+    
+}
+			
+	}).then(function successCallback(response){
+		    console.log("successful");
+				$scope.articles=response.data;
+		}), 	function errorCallback(response){
+			
+			 console.log("failure");
+			
+			}
+			
 		}
    
 	$http({
@@ -24,7 +49,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 	"type" : "select",
     "args" : {
         "table" : "Posts",
-        "columns": ["context", "created",
+        "columns": ["context", "created", "id",
         {
         	"name":"author",
         	"columns":["name"]
