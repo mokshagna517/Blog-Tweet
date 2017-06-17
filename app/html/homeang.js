@@ -14,7 +14,30 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			$scope.liked='Like';
 			
 			}
+			$http({
+		method: "POST",
+		url:   "http://data.vcap.me/v1/query",
+		withCredentials:true,
+		data: {
+	"type" : "insert",
+    "args" : {
+        "table" : "Likes",
+        "objects":[
+            {"post_id":"document.getElementById("post_id").innerHTML", "user_id":"document.getElementById("author_id").innerHTML"}
+        ]
+        
+    }
+    
+}
 			
+	}).then(function successCallback(response){
+		    console.log("successful");
+				
+		}), 	function errorCallback(response){
+			
+			 console.log("failure");
+			
+			}
 			
 		}
    
@@ -29,7 +52,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
         "columns": ["context", "created", "id",
         {
         	"name":"author",
-        	"columns":["name"]
+        	"columns":["name","id"]
         }
         ],
         "order_by":"-created",
