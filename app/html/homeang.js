@@ -23,7 +23,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
     "args" : {
         "table" : "Likes",
         "objects":[
-            {"post_id":"document.getElementById("post_id").innerHTML", "user_id":"document.getElementById("author_id").innerHTML"}
+            {"post_id":document.getElementById("post_id").innerHTML, "user_id":document.getElementById("author_id").innerHTML}
         ]
         
     }
