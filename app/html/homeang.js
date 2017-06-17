@@ -14,30 +14,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			$scope.liked='Like';
 			
 			}
-			$http({
-		method: "POST",
-		url:   "http://data.vcap.me/v1/query",
-		withCredentials:true,
-		data: {
-	"type" : "insert",
-    "args" : {
-        "table" : "Likes",
-        "objects":[
-            {"post_id":}
-        ]
-        
-    }
-    
-}
 			
-	}).then(function successCallback(response){
-		    console.log("successful");
-				
-		}), 	function errorCallback(response){
-			
-			 console.log("failure");
-			
-			}
 			
 		}
    
