@@ -19,6 +19,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 	$http({
 		method: "POST",
 		url:   "http://data.vcap.me/v1/query",
+		withCredentials:true,
 		data: {
 	"type" : "select",
     "args" : {
