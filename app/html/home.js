@@ -1,5 +1,5 @@
 console.log("home");
-
+console.log(window.localStorage.getItem("dinoisses"));
 function myfunc(){
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
