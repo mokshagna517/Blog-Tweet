@@ -32,7 +32,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			
 	}).then(function successCallback(response){
 		    console.log("successful");
-				$scope.articles=response.data;
+				
 		}), 	function errorCallback(response){
 			
 			 console.log("failure");

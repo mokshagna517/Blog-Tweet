@@ -45,7 +45,7 @@ body{
 			 <h2>Recent Posts</h2>
 			<div ng-repeat="x in articles">
 				<b>
-					<span>{{x.id}}</span>{{x.context}}
+					<span>{{x.id}}</span> {{x.context}}
 				</b>
 				<button type="button" class="btn btn-default btn-lg" id='like' ng-controller="myCtrl" ng-click="likeClick()" ng-init="liked='Like';likeCount='0'">
         <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> {{liked}}  {{likeCount}}
