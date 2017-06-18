@@ -5,7 +5,8 @@ function myfunc(){
               if(request.readyState===XMLHttpRequest.DONE){
                   if(request.status===200){
                       console.log("user logged in");
-                      alert(" You are logged in successfully");
+                 var user_id = JSON.parse(this.responseText).hasura_id;     
+                      alert(" You are logged in successfully and your user id is"+user_id);
                       window.location="home";
                       }
                       else{
