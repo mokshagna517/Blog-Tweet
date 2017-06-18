@@ -8,7 +8,7 @@ function myfunc(){
                       console.log("user logged in");
                  var user_id = JSON.parse(this.responseText).hasura_id;  
                  window.localStorage.setItem("u_id",user_id);
-                       console.log(localStrorage.getItem("u_id"));
+                       
                       alert(" You are logged in successfully and your user id is"+ user_id);
                       window.location="home";
                       }
