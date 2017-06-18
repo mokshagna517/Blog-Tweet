@@ -1,4 +1,5 @@
 var app=angular.module('myProfile',[]);
+
 app.controller('profileCtrl',['$scope','$http',function($scope,$http){
 	
 	$scope.
@@ -9,13 +10,14 @@ app.controller('profileCtrl',['$scope','$http',function($scope,$http){
 	"type" : "select",
     "args" : {
         "table" : "Profile",
-        "columns": ["name", 
+        "columns": ["id","name", 
         {
         	"name":"auth_post",
         	"columns":["context"]
         }
         
-        ]
+        ],
+        "where":{"id":user_id}
 
     }
     
