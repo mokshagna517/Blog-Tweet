@@ -81,7 +81,33 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 				}
 				
 				$scope.insertComment=function(index){
-					console.log(document.getElementById(index).innerHTML);
+					var post_id=document.getElementById(index).innerHTML;
+					$http({
+						method: "POST",
+		        url:   "http://data.vcap.me/v1/query",
+		         withCredentials:true,
+						data: {
+	"type" : "insert",
+    "args" : {
+        "table" : "Comments",
+        "objects":[
+            {"post_id":post_id, "user_id":user_id, "comment":document.getElementById("comment").value}
+        ]
+        
+    }
+    
+}
+						
+						
+						
+						}).then(function successCallback(response){
+		    console.log("success");
+				alert("Made a successfulquery");
+		}), 	function errorCallback(response){
+			
+			 console.log("failure");
+			
+			}
 					}
 		
 }]);
