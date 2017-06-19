@@ -36,9 +36,11 @@
   <div class="row" ng-controller="profileCtrl">
   	<div class="col-md-8">
   		<h2>Articles by you</h2>
-  		<ul class="list-group" ng-repeat="x in posts[1].auth_post">
-  <li class="list-group-item list-group-item-success">{{x.context}}</li>
+  		<div ng-repeat="x in posts">
+  		<ul class="list-group" ng-repeat="y in x.auth_post">
+  <li class="list-group-item list-group-item-success">{{y.context}}</li>
    </ul>
+ </div>
   	</div>
   </div>
 		</div>
