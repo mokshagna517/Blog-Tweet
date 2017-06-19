@@ -51,7 +51,7 @@ body{
         <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> {{liked}}  {{likeCount}}
         </button>
          <input type="button" ng-click="commentClick($index)" value="Comment">
-         <div ng-include="'comment.html'" ng-if="isCommentClicked($index)">
+         <div ng-include="'comment.html'" ng-if="isCommentClicked">
        </div>
 				<p>
 					By user : {{x.author.name}}  posted at {{x.created | date}}
