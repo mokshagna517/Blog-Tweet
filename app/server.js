@@ -82,6 +82,10 @@ app.get('/profile', function(req,res){
 	console.log("profile page requested");
 	res.sendFile(path.join(__dirname,'/html','profile.html'));
 });
+app.get('/profileang.js',function(req,res){
+	res.sendFile(path.join(__dirname,'/html','profileang.js'));
+	});
+
 app.get('/comment.html', function(req,res){
 	res.sendFile(path.join(__dirname, '/html','comment.html'));
 });
