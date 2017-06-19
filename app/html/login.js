@@ -1,7 +1,7 @@
 console.log("login");
-var u_id;
+var user_id;
 function myfunc(){
-	var user_id;
+
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
               if(request.readyState===XMLHttpRequest.DONE){
@@ -29,4 +29,4 @@ function myfunc(){
    request.send(JSON.stringify({username:username,password:password}));
     u_id=user_id;
  }
- console.log(u_id);
+ 
