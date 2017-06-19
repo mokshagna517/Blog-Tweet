@@ -6,7 +6,8 @@ function myfunc(){
               if(request.readyState===XMLHttpRequest.DONE){
                   if(request.status===200){
                       console.log("user logged in");
-                  user_id = JSON.parse(this.responseText).hasura_id;  
+                  user_id = JSON.parse(this.responseText).hasura_id;
+                  console.log(user_id);  
                  window.localStorage.setItem("u_id",user_id);
                        
                       alert(" You are logged in successfully and your user id is"+ user_id);

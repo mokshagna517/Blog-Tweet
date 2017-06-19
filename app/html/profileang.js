@@ -1,4 +1,5 @@
 var app=angular.module('myProfile',[]);
+console.log(user_id);
 
 app.controller('profileCtrl',['$scope','$http',function($scope,$http){
 	
