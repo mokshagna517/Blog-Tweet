@@ -1,12 +1,12 @@
 console.log("login");
-
+var user_id;
 function myfunc(){
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
               if(request.readyState===XMLHttpRequest.DONE){
                   if(request.status===200){
                       console.log("user logged in");
-                  window.user_id = JSON.parse(this.responseText).hasura_id;
+                  user_id = JSON.parse(this.responseText).hasura_id;
                   console.log(user_id);  
                  window.localStorage.setItem("u_id",user_id);
                        
