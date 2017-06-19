@@ -43,6 +43,7 @@ body{
 			</section>
 		<section ng-app="myApp" ng-controller="myCtrl" id="posts">
 			 <h2>Recent Posts</h2>
+			 <h3>Your User Id is:<span id="u_id">{{info.hasura_id}}</span></h3>
 			<div ng-repeat="x in articles">
 				<b>
 					<span id="{{$index}}"> {{x.id}} </span> {{x.context}}
