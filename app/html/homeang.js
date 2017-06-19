@@ -83,7 +83,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 				
 				$scope.insertComment=function(index){
 					var post_id=document.getElementById(index).innerHTML;
-					console.log(document.getElementById("comment[index]").value);
+					
 					$http({
 						method: "POST",
 		        url:   "http://data.vcap.me/v1/query",
