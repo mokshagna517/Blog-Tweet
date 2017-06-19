@@ -25,7 +25,7 @@ app.controller('profileCtrl',['$scope','$http',function($scope,$http){
 			
 	}).then(function successCallback(response){
 		    console.log("successful");
-				$scope.posts=response.data[0].context;
+				$scope.posts=response.data.context;
 		}), 	function errorCallback(response){
 			
 			 console.log("failure");
