@@ -93,7 +93,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
     "args" : {
         "table" : "Comments",
         "objects":[
-            {"post_id":post_id, "user_id":user_id, "comment":document.getElementById("comment["+index+"]").innerHTML}
+            {"post_id":post_id, "user_id":user_id, "comment":document.getElementById("comment["+index+"]").value}
         ]
         
     }
