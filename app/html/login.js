@@ -10,6 +10,8 @@ function myfunc(){
                   user_id = JSON.parse(this.responseText).hasura_id;
                   console.log(user_id);  
                  localStorage.setItem('u_id',user_id);
+                  localStorage.getItem('u_id');
+console.log(u_id);
                     
                       alert(" You are logged in successfully and your user id is"+ user_id);
                       window.location="home";
@@ -27,6 +29,7 @@ function myfunc(){
    request.open('POST','http://auth.vcap.me/login',true);
    request.setRequestHeader('Content-Type', 'application/json');
    request.send(JSON.stringify({username:username,password:password}));
-    u_id=user_id;
+   
+
  }
  
