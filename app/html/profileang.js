@@ -1,6 +1,6 @@
 var app=angular.module('myProfile',[]);
 localStorage.getItem('u_id');
-console.log('u_id');
+console.log(u_id);
 
 
 app.controller('profileCtrl',['$scope','$http',function($scope,$http){
