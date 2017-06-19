@@ -81,7 +81,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 				}
 				
 				$scope.insertComment=function(index){
-					console.log(document.getElementById("$index"));
+					console.log(document.getElementById("index"));
 					}
 		
 }]);
