@@ -109,7 +109,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
     "args" : {
         "table" : "Comments",
         "objects":[
-            {"post_id":post_id, "user_id":u_id, "comment":document.getElementById("comment["+index+"]").value}
+            {"post_id":post_id, "user_id":document.getElementById("u_id").value, "comment":document.getElementById("comment["+index+"]").value}
         ]
         
     }
@@ -120,7 +120,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 						
 						}).then(function successCallback(response){
 		    console.log("success");
-				alert("Made a successfulquery");
+				alert("Made a successful comment");
 		}), 	function errorCallback(response){
 			
 			 console.log("failure");
