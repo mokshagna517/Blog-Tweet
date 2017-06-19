@@ -2,7 +2,7 @@ var app=angular.module('myProfile',[]);
 
 app.controller('profileCtrl',['$scope','$http',function($scope,$http){
 	
-	$scope.
+	
 	$http({
 		method: "POST",
 		url:   "http://data.vcap.me/v1/query",
