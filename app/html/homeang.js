@@ -74,7 +74,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			$scope.isCommentClicked=false;
 			$scope.commentClick=function(index){
 				console.log(user_id);
-				console.log(document.getElementById("comment[index]").value);
+				
 				if(!$scope.isCommentClicked){
 				$scope.isCommentClicked=true;
 				}else{
@@ -83,6 +83,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 				
 				$scope.insertComment=function(index){
 					var post_id=document.getElementById(index).innerHTML;
+					console.log(document.getElementById("comment[index]").value);
 					$http({
 						method: "POST",
 		        url:   "http://data.vcap.me/v1/query",
@@ -92,7 +93,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
     "args" : {
         "table" : "Comments",
         "objects":[
-            {"post_id":post_id, "user_id":user_id, "comment":document.getElementById("comment").value}
+            {"post_id":post_id, "user_id":user_id, "comment":document.getElementById("comment[index]").value}
         ]
         
     }
