@@ -79,6 +79,10 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 				}else{
 					$scope.isCommentClicked=false;}
 				}
+				
+				$scope.insertComment=function(index){
+					console.log(index);
+					}
 		
 }]);
  
