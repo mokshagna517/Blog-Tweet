@@ -1,4 +1,5 @@
 console.log("Profilejs");
+console.log(user_id);
 document.getElementById('btn').onclick=function profunc(){
   var request=new XMLHttpRequest;
    request.onreadystatechange=function(){
