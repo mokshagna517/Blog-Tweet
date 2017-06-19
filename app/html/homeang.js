@@ -1,5 +1,7 @@
 
 var app=angular.module("myApp",[]);
+var u_id=user_id;
+console.log(u_id);
 app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 	
 	var hasLiked=false;
@@ -93,7 +95,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
     "args" : {
         "table" : "Comments",
         "objects":[
-            {"post_id":post_id, "user_id":user_id, "comment":document.getElementById("comment["+index+"]").value}
+            {"post_id":post_id, "user_id":u_id, "comment":document.getElementById("comment["+index+"]").value}
         ]
         
     }
