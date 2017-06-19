@@ -73,7 +73,8 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			
 			$scope.isCommentClicked=false;
 			$scope.commentClick=function(index){
-				
+				console.log(user_id);
+				console.log(document.getElementById("comment").value);
 				if(!$scope.isCommentClicked){
 				$scope.isCommentClicked=true;
 				}else{
