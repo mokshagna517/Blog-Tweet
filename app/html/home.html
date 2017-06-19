@@ -50,8 +50,8 @@ body{
 				<button type="button" class="btn btn-default btn-lg" id='like' ng-controller="myCtrl" ng-click="likeClick()" ng-init="liked='Like';likeCount='0'">
         <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> {{liked}}  {{likeCount}}
         </button>
-         <input type="button" ng-click="commentClick()" value="Comment">
-         <div ng-include="'comment.html'" ng-if="isCommentClicked">
+         <input type="button" ng-click="commentClick($index)" value="Comment">
+         <div ng-include="'comment.html'" ng-if="isCommentClicked($index)">
        </div>
 				<p>
 					By user : {{x.author.name}}  posted at {{x.created | date}}

@@ -72,12 +72,12 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			}
 			
 			$scope.isCommentClicked=false;
-			$scope.commentClick=function(){
+			$scope.commentClick=function(index){
 				
 				if(!$scope.isCommentClicked){
-				$scope.isCommentClicked=true;
+				$scope.isCommentClicked(index)=true;
 				}else{
-					$scope.isCommentClicked=false;}
+					$scope.isCommentClicked(index)=false;}
 				}
 				
 				$scope.insertComment=function(index){
