@@ -51,7 +51,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
         "table" : "post_likes",
         "columns":[
             "no_likes" 
-        ]
+        ],
        "where":{"post_id":document.getElementById(index).innerHTML} 
     }
     
