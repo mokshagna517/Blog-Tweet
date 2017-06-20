@@ -7,6 +7,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+     <script type="text/javascript" src="home.js"></script>
 			<script type="text/javascript" src="userang.js"></script>
 		</head>
 	<body ng-app="myUser">
@@ -15,6 +16,18 @@
 			<br>
 			<h2>Find someone in our app whom you know......</h2>
 		</header>
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+    <ul class="nav navbar-nav">
+      <li ><a href="http://app.vcap.me/home">Home</a></li>
+      <li><a href="http://app.vcap.me/profile">Profile</a></li>
+      <li class="active"><a href="http://app.vcap.me/user">Users</a></li>
+      
+    </ul>
+    <button class="btn btn-danger navbar-btn" onclick="myfunc()">Logout</button>
+  </div>
+</nav>
 		<div class="container" ng-controller="userCtrl">
 			<div class="row">
 				<div class="col-md-4" >
