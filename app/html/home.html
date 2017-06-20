@@ -55,9 +55,9 @@ body{
         </button>
         
         <span class="label label-info" ng-click="getlikes($index)">No of Likes:</span>
-        
-         {{likecount[$index].no_likes}}
-       
+        <div ng-show="$index==={{in}}">
+         {{likecount[0].no_likes}}
+       </div>
          <input type="button" ng-click="commentClick($index)" value="Comment">
          <div ng-include="'comment.html'" ng-if="isCommentClicked">
        </div>

@@ -45,6 +45,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			
 		}
 		$scope.getlikes=function(index){
+			$scope.in=index;
 		$http({
 		method: "POST",
 		url:   "http://data.vcap.me/v1/query",
