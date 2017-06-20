@@ -59,6 +59,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			
 	}).then(function successCallback(response){
 		    console.log("successful");
+		    alert("fetched likes");
 		    $scope.likecount=response.data;
 				
 		}), 	function errorCallback(response){
