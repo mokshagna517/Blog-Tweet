@@ -5,7 +5,7 @@ console.log(u_id);
 app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 	
 	var hasLiked=false;
-	$scope.likeClick=function(){
+	$scope.likeClick=function(index){
 		if(!hasLiked){
 			hasLiked=true;
 			$scope.likeCount+=1;
@@ -25,7 +25,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
     "args" : {
         "table" : "Likes",
         "objects":[
-            {"post_id":document.getElementById("post_id").innerHTML, "user_id":document.getElementById("author_id").innerHTML}
+            {"post_id":document.getElementById(index).innerHTML, "user_id":document.getElementById("u_id").innerHTML}
         ]
         
     }
@@ -34,6 +34,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			
 	}).then(function successCallback(response){
 		    console.log("successful");
+		    alert("You liked an article");
 				
 		}), 	function errorCallback(response){
 			
