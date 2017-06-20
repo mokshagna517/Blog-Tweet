@@ -158,6 +158,36 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			
 			}
 					}
+					$scope.getcomments=function(index){
+			$scope.in=index;
+		$http({
+		method: "POST",
+		url:   "http://data.vcap.me/v1/query",
+		withCredentials:true,
+		data: {
+	"type" : "select",
+    "args" : {
+        "table" : "post_comments",
+        "columns":[
+            "no_comments" 
+        ],
+       "where":{"post_id":document.getElementById(index).innerHTML} 
+    }
+    
+}
+			
+	}).then(function successCallback(response){
+		    console.log("successful");
+		    alert("fetched comments");
+		    $scope.commentcount=response.data;
+				
+		}), 	function errorCallback(response){
+			
+			 console.log("failure");
+			
+			}
+		}
+					
 		
 }]);
  
