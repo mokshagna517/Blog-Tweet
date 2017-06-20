@@ -54,7 +54,7 @@ body{
         <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> {{liked}}  
         </button>
         
-        <span class="label label-info" >No of Likes:</span>
+        <span class="label label-info" ng-click="getlikes($index)">No of Likes:</span>
          {{likecount[0].no_likes}}
          <input type="button" ng-click="commentClick($index)" value="Comment">
          <div ng-include="'comment.html'" ng-if="isCommentClicked">

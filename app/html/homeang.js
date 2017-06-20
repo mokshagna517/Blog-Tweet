@@ -41,7 +41,11 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			 console.log("failure");
 			
 			}
-			$http({
+			
+			
+		}
+		$scope.getlikes=function(index){
+		$http({
 		method: "POST",
 		url:   "http://data.vcap.me/v1/query",
 		withCredentials:true,
@@ -67,7 +71,6 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			 console.log("failure");
 			
 			}
-			
 		}
 		$http({
 		method: "GET",
