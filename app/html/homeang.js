@@ -159,7 +159,7 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			}
 					}
 					$scope.getcomments=function(index){
-			$scope.in=index;
+			$scope.ind=index;
 		$http({
 		method: "POST",
 		url:   "http://data.vcap.me/v1/query",
