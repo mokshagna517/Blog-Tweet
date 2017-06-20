@@ -3,7 +3,20 @@ var app=angular.module('myProfile',[]);
 
 
 app.controller('profileCtrl',['$scope','$http',function($scope,$http){
-	
+	$http({
+		method: "GET",
+		url:   "http://auth.vcap.me/user/account/info",
+		withCredentials:true,
+		
+			
+	}).then(function successCallback(response){
+		    console.log("successful info");
+				$scope.information=response.data;
+		}), 	function errorCallback(response){
+			
+			 console.log("failure");
+			
+			}
 	$scope.posts=[];
 	$http({
 		method: "POST",
