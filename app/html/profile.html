@@ -36,11 +36,12 @@
       </div>
       <div class="row">
   <h1>Edit Profile Information</h1>
+  <p>Your user_id is: {{information.hasura_id}}</p>
     <div class="col-md-6">
     <input type="text" id="name" placeholder="Enter your profile name" size="50">
     
     <input type="text" id="place" placeholder="Enter the name of the place you live" size="50">
-    <input type="text" id="userid" value="{{information.hasura_id}}" size="50" >
+    <input type="text" id="userid" placeholder="Enter the user_id correctly which is shown above" size="50" >
     <input type="text" id="dob" placeholder="Enter your date of Birth" size="50">
     <br>
     <button type="button" class="btn btn-primary " id="btn">Submit</button>
