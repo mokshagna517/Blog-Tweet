@@ -41,6 +41,31 @@ app.controller("myCtrl",[ '$scope','$http', function($scope,$http){
 			 console.log("failure");
 			
 			}
+			$http({
+		method: "POST",
+		url:   "http://data.vcap.me/v1/query",
+		withCredentials:true,
+		data: {
+	"type" : "select",
+    "args" : {
+        "table" : "post_likes",
+        "columns":[
+            {"no_likes" }
+        ]
+       "where":{"post_id":document.getElementById(index).innerHTML} 
+    }
+    
+}
+			
+	}).then(function successCallback(response){
+		    console.log("successful");
+		    $scope.likecount=response.data;
+				
+		}), 	function errorCallback(response){
+			
+			 console.log("failure");
+			
+			}
 			
 		}
 		$http({
