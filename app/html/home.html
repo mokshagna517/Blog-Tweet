@@ -13,6 +13,9 @@
   font-size: 18px;
   text-align: center;
 }
+.container{
+	background-color:blue;
+}
 body{
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-t-4TJ3zgJOT_xkmMQwpRbi1ElQwtYMac51Z5jS_DXEGF6Bt8NA");
   background-size:cover;
@@ -42,7 +45,7 @@ body{
 				
 			</section>
 			<div class="container" class="row">
-				<div class="col-md-10">
+				
 		<section ng-app="myApp" ng-controller="myCtrl" id="posts">
 			 <h2>Recent Posts</h2>
 			 <h3>Your User Id is:<span id="u_id">{{info.hasura_id}}</span></h3>
@@ -79,7 +82,7 @@ body{
 		<div>
 				<input type="button"  onclick="myfunc()" value="Logout" />
 			</div>
-		</div>
+		
 	</div>
 			<script type="text/javascript" src="login.js"></script>
 			<script type="text/javascript" src="home.js"></script>
